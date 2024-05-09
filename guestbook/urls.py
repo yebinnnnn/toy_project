@@ -1,6 +1,9 @@
 from django.urls import path
-from guest_book.views import *
+from guestbook.views import *
 
 urlpatterns= [
-    path('<int:id>', guestbook ,name='guest_book')
+
+    path('', GuestBookList.as_view()),
+    path('<int:id>/', GuestBookDetail.as_view())
+    
 ]
