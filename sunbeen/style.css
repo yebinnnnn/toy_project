@@ -38,6 +38,8 @@ button:hover {
 #container {
     width: 90%;
     gap : 10px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -79,8 +81,13 @@ button:hover {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+#entry{
+    width: 800px;
+    border-radius: 10px;
+    background-color: papayawhip;
+    padding:20px;
+    margin-bottom: 20px;
 }
 
 /*

@@ -13,8 +13,14 @@ writeBtn.addEventListener("click", function() {
     const title = titleInput.value;
     const content = contentInput.value;
 
+    if (!author || !password || !title || !content) {
+        alert("모든 항목을 작성해주세요!");
+        return; // 함수 종료
+    }
+
     // 방명록 항목 생성
     const entry = document.createElement("div");
+    entry.id = 'entry';
     entry.classList.add("entry");
     entry.innerHTML = `
         <p><strong>작성자:</strong> ${author}</p>
