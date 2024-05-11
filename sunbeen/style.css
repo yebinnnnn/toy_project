@@ -90,6 +90,14 @@ button:hover {
     margin-bottom: 20px;
 }
 
+#entry .title {
+    font-size: 1.5em;
+}
+
+#entry .date {
+    color: grey;
+    text-align: right;
+}
 /*
 img {
 width: 90%;

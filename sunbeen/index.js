@@ -26,9 +26,39 @@ writeBtn.addEventListener("click", function() {
         <p><strong>작성자:</strong> ${author}</p>
         <p><strong>제목:</strong> ${title}</p>
         <p><strong>내용:</strong> ${content}</p>
-        <p>작성일자</p>
-        <p>수정일자</p>
+        <p><strong>작성일자:</strong> ${new Date().toLocaleDateString()}</p>
+        <p><strong>수정일자:</strong> ${new Date().toLocaleDateString()}</p>
+        <input type="password" placeholder="비밀번호를 입력하세요">
+        <button class="delete-btn">삭제</button>
+        <button class="edit-btn">수정</button>
     `;
+
+    // 삭제 버튼 이벤트 리스너 추가
+    const deleteBtn = entry.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", function() {
+        const passwordField = entry.querySelector("input[type='password']");
+        const inputPassword = passwordField.value;
+        // 여기서 비밀번호 확인 로직을 구현하고, 맞다면 entry를 삭제합니다.
+        if (inputPassword === password) {
+            entry.remove();
+            alert("삭제되었습니다.");
+        } else {
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+    });
+
+    // 수정 버튼 이벤트 리스너 추가
+    const editBtn = entry.querySelector(".edit-btn");
+    editBtn.addEventListener("click", function() {
+        const passwordField = entry.querySelector("input[type='password']");
+        const inputPassword = passwordField.value;
+        // 여기서 비밀번호 확인 로직을 구현하고, 맞다면 수정 가능한 상태로 전환합니다.
+        if (inputPassword === password) {
+            alert("수정 가능한 상태로 전환합니다.");
+        } else {
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+    });
 
     // 방명록에 추가
     listContainer.appendChild(entry);
