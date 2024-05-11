@@ -20,6 +20,8 @@ writeBtn.addEventListener("click", function() {
         <p><strong>작성자:</strong> ${author}</p>
         <p><strong>제목:</strong> ${title}</p>
         <p><strong>내용:</strong> ${content}</p>
+        <p>작성일자</p>
+        <p>수정일자</p>
     `;
 
     // 방명록에 추가
