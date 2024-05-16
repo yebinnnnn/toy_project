@@ -96,28 +96,6 @@ button:hover {
     /* box-shadow: 0 10px 10px -5px gray; */
 }
 
-.title {
-    font-size: 1.5em;
-}
-
-.entry .date {
-    color: grey;
-    text-align: right;
-}
-
-#titleinentry {
-    font-size: 30px;
-    text-align: center;
-    text-decoration-line: underline;
-    text-decoration-style: double;
-}
-#contentinentry {
-    text-align: center;
-}
-#infoinentry {
-    text-align: right;
-}
-
 @media (min-width: 1200px) {
   #list {
     grid-template-columns: 1fr 1fr 1fr;
