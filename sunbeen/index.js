@@ -46,7 +46,7 @@ writeBtn.addEventListener("click", function() {
     });
 
     // 방명록에 추가
-    listContainer.appendChild(entry);
+    listContainer.prepend(entry);
 
     // 입력 필드 비우기
     authorInput.value = "";
