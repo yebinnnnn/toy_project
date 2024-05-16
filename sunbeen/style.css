@@ -84,18 +84,6 @@ button:hover {
     width: 100%;
 }
 
-#entry{
-    width: 500px;
-    border-radius: 10px;
-    background-color: oldlace;
-    padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    /* border: 5px dotted black; */
-    /* box-shadow: 0 10px 10px -5px gray; */
-}
-
 @media (min-width: 1200px) {
   #list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -115,21 +103,16 @@ button:hover {
 }
 
 #entry {
-  width: 100%;
-  border-radius: 10px;
-  background-color: oldlace;
-  padding: 10px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-.title {
-  font-size: 1.5em;
-}
-
-.entry .date {
-  color: grey;
-  text-align: right;
+    width: 100%;
+    border-radius: 10px;
+    background-color: oldlace;
+    padding: 10px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    /* border: 5px dotted black; */
+    /* box-shadow: 0 10px 10px -5px gray; */
 }
 
 #titleinentry {
