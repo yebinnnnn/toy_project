@@ -141,7 +141,7 @@ button:hover {
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     /* box-shadow: 0px 5px 5px -5px gray; */
 }
 
