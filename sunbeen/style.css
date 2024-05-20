@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-image: url(images/키티배경.jpg);
+  background-image: url(images/그린배경.jpg);
   background-size:cover;
   background-position: center;
   display: flex;
@@ -19,7 +19,7 @@ body {
 button {
   all: unset;
   margin: 10px 0;
-  background-color: pink;
+  background-color: rgb(148, 215, 153);
   color: rgb(255, 255, 255);
   font-weight: 700;
   padding: 5px;
@@ -30,7 +30,8 @@ button {
 button:hover {
   all: unset;
   margin: 10px 0;
-  background-color: lightblue;
+  background-color: rgb(255, 177, 190);
+  
   color: rgb(255, 255, 255);
   font-weight: 700;
   padding: 5px;
@@ -101,8 +102,9 @@ button:hover {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: url(images/키티배경.jpg);
-    background-size:contain;
+    background-image: url(images/핑크배경.jpg);
+    background-size:cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,26 +118,12 @@ button:hover {
   #list {
     grid-template-columns: 1fr;
   }
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: url(images/키티배경.jpg);
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "IBM Plex Sans KR", sans-serif;
-    padding-bottom: 5%;
-  }
-  
 }
 
 #entry {
     width: 100%;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255,0.8);
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
     margin-bottom: 20px;
     padding-left: 30px;
