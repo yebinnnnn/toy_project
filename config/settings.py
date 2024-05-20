@@ -38,7 +38,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -57,7 +57,7 @@ PROJECT_APPS = [
 ]
 
 THIRD_PARTY_APPS =[
-
+    "corsheaders"
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS +THIRD_PARTY_APPS
@@ -70,6 +70,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -96,10 +97,21 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "toy_project",
+        "USER" : "root",
+        "PASSWORD" :"1234",
+        "HOST":"localhost",
+        "PORT":"5432",
     }
 }
 
@@ -138,3 +150,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CORS_ALLOW_CREDENTIALS= True
+
+CORS_ALLOW_ORIGINS=[
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
